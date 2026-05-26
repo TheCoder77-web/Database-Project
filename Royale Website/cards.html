@@ -2,12 +2,10 @@
 <html>
   <head>
     <title>Java-59-Actvy</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
-    <!-- import JS file -->    
-    <script src="borrowedbooks.js"></script>
+    <link href="cards.css" rel="stylesheet" type="text/css" />   
+    <script src="cards.js"></script>
   </head>
   
-  <!-- Call the int function when website loads -->
   <body onload="init()">
    <div>
       <div id="header">
@@ -26,8 +24,8 @@
       <div class="container"> 
         <div class='panel'>
           Left Panel
-          <h3> Search for ISBN by member id </h3>
-              <input style="flex:2;text-align:right;" type="text" id="memberid" placeholder="Enter member id" >  <br>      
+          <h3>Search for books by author</h3>
+              <input style="flex:2;text-align:right;" type="text" id="author" placeholder="Enter author">        
               <a class="button" onclick="filter()"> Search </a><br>
               <h4 id="count"></h4>
         </div>
