@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Java-59-Actvy</title>
+    <title>Cards</title>
     <link href="cards.css" rel="stylesheet" type="text/css" />   
     <script src="cards.js"></script>
   </head>
@@ -9,32 +9,28 @@
   <body onload="init()">
    <div>
       <div id="header">
-        <h1> Lesson 59 ACTIVITY</h1>
+        <h1>Cards</h1>
       </div>
 
       <nav id='nav'>
         <h2>Navigation - Home Page</h2>
 
         <a href="index.html" class="button">HOME</a>   
-        <a href="books.html" class="button">BOOKS</a> 
-        <a href="borrowedbooks.html" class="button">BORROWED BOOKS</a>
-        <a href="members.html" class="button">MEMBERS</a>
+        <a href="cards.html" class="button">CARDS</a> 
+        <a href="arenas.html" class="button">ARENAS</a>
       </nav>
   
       <div class="container"> 
         <div class='panel'>
           Left Panel
-          <h3>Search for books by author</h3>
-              <input style="flex:2;text-align:right;" type="text" id="author" placeholder="Enter author">        
+          <h3>Search for cards by rarity</h3>
+              <input style="flex:2;text-align:right;" type="text" id="rarity" placeholder="Enter rarity">        
               <a class="button" onclick="filter()"> Search </a><br>
               <h4 id="count"></h4>
         </div>
         
         <div id='centerpanel'>
           Center Panel
-          <h3>
-            This webpage will allow you to browse the library database.  There are three pages which you can search for books, borrowed books, and members.
-          </h3>
         </div>
         
         <div class='panel'>

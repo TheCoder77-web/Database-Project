@@ -1,26 +1,27 @@
-let books, info;
+let cards, info;
 
 async function init(){
-  let link = "https://glowing-eureka-v6rv96w4gw9gh6pvw-8500.app.github.dev"; //replace with your Dev URL
-  let route= "/books";
+  let link = "https://fantastic-space-system-g4rqj4695vq6cpwrv-8500.app.github.dev"; //replace with your Dev URL
+  let route= "/cards";
 
   info = await fetch(link+route);
-  books = await info.json();
+  cards = await info.json();
 
-  generateCards(books);
+  generateCards(cards);
 }
 
-function generateCards(books){
+function generateCards(cards){
   let output = document.getElementById("centerpanel");
   let build ="";
 
-  for(let i=0; i<books.length; i++){
-    let book = books[i];
+  for(let i=0; i<cards.length; i++){
+    let card = cards[i];
     build += `<div class="card">`
-    build += `<h3> ISBN: ${book.ISBN}</h3>`;
-    build += `<div> Title: ${book.Titles}</div>`;
-    build += `<div> Author: ${book.Authors}</div>`;
-    build += `<div> Genre: ${book.Genre}</div>`;
+    build += `<h3> Card Name: ${card.CardName}</h3>`;
+    build += `<div> Elixir Cost: ${card.ElixirCost}</div>`;
+    build += `<div> Rarity: ${card.Rarity}</div>`;
+    build += `<div> Evolution: ${card.Evolution}</div>`;
+    build += `<div> Hero: ${card.Hero}</div>`;
     build += `<hr>`;
     build += `</div>`;
   }
@@ -29,16 +30,16 @@ function generateCards(books){
 }
 
 function filter(){
-  let author = document.getElementById("author").value;
-  let bookList = []; 
+  let rarity = document.getElementById("rarity").value;
+  let cardList = []; 
   
-  for(let i=0; i<books.length;i++){
-    let book = books[i];
+  for(let i=0; i<cards.length;i++){
+    let card = cards[i];
     
-    if(book.Authors == author){
-      bookList.push(book);
+    if(card.Rarity == rarity){
+      cardList.push(card);
     }
   }
   
-  generateCards(bookList);  
+  generateCards(cardList);  
 }

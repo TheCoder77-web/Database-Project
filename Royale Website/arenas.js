@@ -1,25 +1,27 @@
-let borrowedbooks, info;
+let arenas, info;
 
 async function init(){
-  let link = "https://glowing-eureka-v6rv96w4gw9gh6pvw-8500.app.github.dev"; //replace with your Dev URL
-  let route= "/borrowedbooks";
+  let link = "https://fantastic-space-system-g4rqj4695vq6cpwrv-8500.app.github.dev"; //replace with your Dev URL
+  let route= "/arenas";
 
   info = await fetch(link+route);
-  borrowedbooks = await info.json();
+  arenas = await info.json();
 
-  generateCards(borrowedbooks);
+  generateCards(arenas);
 }
 
-function generateCards(borrowedbooks){  
+function generateCards(arenas){  
   let output = document.getElementById("centerpanel");
   let build ="";
    
-  for(let i=0; i<borrowedbooks.length; i++){
-    let borrowedbook = borrowedbooks[i];
+  for(let i=0; i<arenas.length; i++){
+    let arena = arenas[i];
     build += `<div class="card" >`
-    build += `<h3> ISBN: ${borrowedbook.ISBN}</h3>`;
-    build += `<div> Member Id: ${borrowedbook.MemberId}</div>`;
-    build += `<div> Due Date: ${borrowedbook.DueDate}</div>`;
+    build += `<h3> Arena Name: ${arena.ArenaName}</h3>`;
+    build += `<div> Arena Number: ${arena.ArenaNumber}</div>`;
+    build += `<div> Trophies Required: ${arena.Trophies}</div>`;
+    build += `<div> King Level: ${arena.KingLevel}</div>`;
+    build += `<div> Lucky Chest Level: ${arena.ChestLevel}</div>`;
     build += `<hr>`;
     build += `</div>`;
   }
@@ -27,16 +29,16 @@ function generateCards(borrowedbooks){
 }
 
 function filter(){
-  let memberid = document.getElementById("memberid").value;
-  let borrowedBooks = []; 
+  let kingLevel = document.getElementById("kingLevel").value;
+  let arenas = []; 
   
-  for(let i=0; i<borrowedbooks.length;i++){
-    let borrowedbook = borrowedbooks[i];
+  for(let i=0; i<arenas.length;i++){
+    let arena = arenas[i];
     
-    if(borrowedbook.MemberId == memberid){
-        borrowedBooks.push(borrowedbook);
+    if(arena.KingLevel == kingLevel){
+        arenas.push(arena);
     }
   }
 
-  generateCards(borrowedBooks);  
+  generateCards(arenas);  
 }
