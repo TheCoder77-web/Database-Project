@@ -11,7 +11,6 @@ import java.util.Map;
 // To execute(run) in Windows use: java -cp sqlite-jdbc-3.23.1.jar: Main
 
 class Main {
-
  public static void main(String[] args)throws IOException{
     (new Main()).init();
   }
