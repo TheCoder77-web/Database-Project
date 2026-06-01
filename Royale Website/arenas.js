@@ -30,15 +30,15 @@ function generateCards(arenas){
 
 function filter(){
   let kingLevel = document.getElementById("kingLevel").value;
-  let arenas = []; 
+  let arn = []; 
   
   for(let i=0; i<arenas.length;i++){
     let arena = arenas[i];
     
     if(arena.KingLevel == kingLevel){
-        arenas.push(arena);
+        arn.push(arena);
     }
   }
 
-  generateCards(arenas);  
+  generateCards(arn);  
 }
