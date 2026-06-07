@@ -1,3 +1,12 @@
+/* Good things to use/keep note of using w3schools
+
+-Rem: https://www.w3schools.com/cssref/func_rem.php
+-Linear Gradient: https://www.w3schools.com/css/css3_gradients.asp
+-Transitions: https://www.w3schools.com/css/css3_transitions.asp
+-Transformations: https://www.w3schools.com/cssref/css3_pr_transform.php
+
+*/
+
 body{
   margin: 0;
   padding: 0;
@@ -61,7 +70,7 @@ body{
   align-content: flex-start;
 }
 
-/* Credits to w3schools for the guide with styling flip card */
+/* Credits to w3schools for the guide with styling flip card (https://www.w3schools.com/howto/howto_css_flip_card.asp) */
 .card-flip-container{
   perspective: 1000px; 
   width: 280px;

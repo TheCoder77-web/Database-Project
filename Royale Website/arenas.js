@@ -18,6 +18,7 @@ function generateCards(arenas){
     let arena = arenas[i];
     let arenaImg = arena.ArenaName.toLowerCase().replace(/ /,"_");
     
+    //Credits to w3school for help with the switch statements (https://www.w3schools.com/js/js_switch.asp)
     switch(arena.ArenaName){
       case "P.E.K.K.A's Playhouse":
         arenaImg = "pekka's_playhouse";
