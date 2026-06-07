@@ -29,10 +29,10 @@ class Main {
 
     String sql = "";
     sql = " Select * from Cards ";
-    server.createContext("/cards", new RouteHandler(db,sql) );
+    server.createContext("/cards", new RouteHandler(db,sql));
 
-    sql = " Select * from Arenas ";
-    server.createContext("/arenas", new RouteHandler(db,sql) ) ;
+    sql = "SELECT * FROM Arenas";
+    server.createContext("/arenas", new RouteHandler(db, sql));
     
     server.start();
     System.out.println("Server is listening on port " + port);      

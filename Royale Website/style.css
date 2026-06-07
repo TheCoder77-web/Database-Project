@@ -56,6 +56,10 @@ body{
   box-sizing: border-box;
 }
 
+#centerpanel h1{
+  color:red;
+}
+
 .button{
   display: inline-block;
   text-decoration: none;

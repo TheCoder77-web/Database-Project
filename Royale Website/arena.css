@@ -61,21 +61,98 @@ body{
   align-content: flex-start;
 }
 
-.card{
+/* Credits to w3schools for the guide with styling flip card */
+.card-flip-container{
+  perspective: 1000px; 
   width: 280px;
-  padding: 20px;
-  background: linear-gradient(145deg, #25253b, #1f1f32);
-  border: 1px solid #3d3d5c;
-  border-radius: 12px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
-  transition: transform 0.2s, border-color 0.2s;
-  text-align: center;
+  height: 320px; 
 }
 
-.card div{
+.card-inner{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s ease;
+  transform-style: preserve-3d; 
+  cursor: pointer;
+}
+
+.card-inner.is-flipped{
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  border: 1px solid #3d3d5c;
+  box-sizing: border-box;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-front{
+  background: linear-gradient(145deg, #25253b, #1f1f32);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  justify-content: center;
+  align-items: center;
+}
+
+.card-front h3{
+  margin: 0 0 10px 0;
+  font-size: 1.4rem;
+  color: #ffffff;
+}
+
+.card-front div{
   font-size: 0.95rem;
   color: #b9b9d2;
-  margin: 8px 0;
+}
+
+.card-back{
+  background: linear-gradient(145deg, #1f1f32, #161624);
+  transform: rotateY(180deg); 
+  justify-content: space-between; 
+  align-items: center;
+  text-align: center;           
+}
+
+.card-back div{
+  width: 100%;
+  font-size: 0.9rem;
+  color: #b9b9d2;
+  margin: 3px 0;
+}
+
+.wild-card-display{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.wild-card-img{
+  width: auto;
+  max-width: 70px;  
+  max-height: 70px;    
+  object-fit: contain; 
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
+  margin: 0 auto;
+}
+
+.wild-card-text{
+  font-size: 0.85rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 8px;
+  letter-spacing: 0.5px;
+  color: #ffcb05; 
 }
 
 .button{
