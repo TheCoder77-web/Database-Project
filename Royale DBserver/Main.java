@@ -19,13 +19,13 @@ class Main {
   void printt(Object o){ System.out.print(o);}
 
   void init() throws IOException{   
-    int port = 8500;
+    int port = 7000;
 
     HttpServer server = HttpServer.create(new InetSocketAddress(port),0);
 
     Database db = new Database("jdbc:sqlite:royale.db");
 
-    server.createContext("/", new RouteHandler("Default route...") );
+    server.createContext("/", new RouteHandler("This is the default route :)") );
 
     String sql = "";
     sql = " Select * from Cards ";
