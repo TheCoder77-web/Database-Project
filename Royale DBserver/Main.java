@@ -19,7 +19,7 @@ class Main {
   void printt(Object o){ System.out.print(o);}
 
   void init() throws IOException{   
-    int port = 7000;
+    int port = 8500;
 
     HttpServer server = HttpServer.create(new InetSocketAddress(port),0);
 
