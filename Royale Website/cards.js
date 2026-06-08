@@ -32,7 +32,7 @@ function generateCards(cards){
     build += `<div class="card-back">`;
     build += `<div class="wild-card-display">`;
     build += `<img src="card-rarity-images/${cardImg}.webp" alt="${wildCard} Wild Card" class="wild-card-img">`;
-    build += `<div class="wild-card-text">${wildCard} Wild Card</div>`;
+    build += `<div class="wild-card-text">${wildCard} Rarity</div>`;
     build += `</div>`;
     
     build += `<hr style="border-color: #2d2d44; width: 100%;">`;
